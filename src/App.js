@@ -6,7 +6,11 @@ export default function App() {
 
     const [allDices, setAllDices] = React.useState(allNewDice())
     const [tenzies, setTenzies] = React.useState(false)
-    
+
+    React.useEffect(() => {
+        console.log("Dice state changed")
+    }, [allDices])
+
 
     function generateNewDie() {
         return {
