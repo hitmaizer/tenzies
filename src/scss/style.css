@@ -4,3 +4,53 @@
           box-sizing: border-box;
   font-family: 'Karla', sans-serif;
 }
+
+body {
+  background-color: #0B2434;
+  padding: 20px;
+}
+
+main {
+  background-color: #F5F5F5;
+  height: 400px;
+  max-width: 800px;
+  border-radius: 5px;
+}
+
+.die--wrapper {
+  background-color: #FFFFFF;
+  color: #0B2434;
+  width: 60px;
+  min-height: 60px;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 3.81277px;
+  cursor: pointer;
+}
+
+.die--container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[5];
+      grid-template-columns: repeat(5, auto);
+  -ms-grid-rows: minmax(auto, auto);
+      grid-template-rows: minmax(auto, auto);
+  gap: 16px;
+  place-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100%;
+}
+
+.die--number {
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21.4254px;
+  line-height: 60px;
+  text-align: center;
+  vertical-align: middle;
+  height: 60px;
+  margin: 0;
+  color: #2B283A;
+}
