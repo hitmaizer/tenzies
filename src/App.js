@@ -9,8 +9,10 @@ export default function App() {
 
     React.useEffect(() => {
           const allHeld = allDices.every(die => die.isHeld)
-          const allNumber = allDices.every(die => die.value)
-          if (allHeld && allNumber) {
+          const firstValue = allDices[0].value
+          const allSameValue = allDices.every(die => die.value === firstValue)
+          if (allHeld && allSameValue) {
+              setTenzies(true)
               console.log("you won")
           }
      
