@@ -5,6 +5,8 @@ import {nanoid} from "nanoid"
 export default function App() {
 
     const [allDices, setAllDices] = React.useState(allNewDice())
+    const [tenzies, setTenzies] = React.useState(false)
+    
 
     function generateNewDie() {
         return {
