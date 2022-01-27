@@ -8,7 +8,12 @@ export default function App() {
     const [tenzies, setTenzies] = React.useState(false)
 
     React.useEffect(() => {
-        console.log("Dice state changed")
+          const allHeld = allDices.every(die => die.isHeld)
+          const allNumber = allDices.every(die => die.value)
+          if (allHeld && allNumber) {
+              console.log("you won")
+          }
+     
     }, [allDices])
 
 
@@ -56,7 +61,7 @@ export default function App() {
         }))    
     }
     
-    console.log(allDices)
+    
     return (
         <div className="page--wrapper">
             <main>
